@@ -7,7 +7,7 @@ class Channel {
   final String profilePictureUrl;
   final String subscribeCount;
   final String videoCount;
-  final String uploadPlayListId;
+  final String uploadPlaylistId;
   List<Video> videos;
 
   Channel({
@@ -16,7 +16,7 @@ class Channel {
     this.profilePictureUrl,
     this.subscribeCount,
     this.videoCount,
-    this.uploadPlayListId,
+    this.uploadPlaylistId,
     this.videos 
   });
 
@@ -28,7 +28,7 @@ factory Channel.fromMap(Map<String, dynamic> map){
     profilePictureUrl: map['snippet']['thumbnails']['default']['url'],
     subscribeCount: map['statistics']['subscribeCount'],
     videoCount: map['statistics']['videoCount'],
-    uploadPlayListId: map['contentDetails']['relatedPlayLists']['uploads']
+    uploadPlaylistId: map['contentDetails']['relatedPlayLists']['uploads']
   );
 }
 }
